@@ -6,12 +6,20 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+
+  background: linear-gradient(
+    180deg,
+    rgba(227, 255, 248, 0) 82.08%,
+    rgba(227, 255, 248, 0.38) 100%
+  );
+  min-height: 100vh; /* melhor p/ responsividade, pois podemos inserir novas sections, rolagens etc na pág. */
 }
 
 .page {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 1000px;
-  margin: 65px auto 0px;
+  margin: 0 auto;
+  padding-top: 65px; /* Melhor p/ responsividade da vh, do que definir pelo margin-top. Assim fica justo na vh e não precisa scroolar!*/
 }
 
 nav {
@@ -19,6 +27,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 55px;
+}
+
+#logo {
+  width: 102px;
+  height: auto;
 }
 
 ul {
@@ -35,11 +48,18 @@ ul li a {
   text-decoration: none;
   color: #1f1534;
   font-size: 18px;
+  opacity: 0.5;
 }
 
 /* ":" significa pseudo class */
 ul li a:hover {
   font-weight: bold;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 h1 {
@@ -62,22 +82,44 @@ h1 span {
 section p {
   font-size: 14px;
   line-height: 28px;
-  color: #7D7987;
+  color: #7d7987;
 
   margin: 40px 0px;
+}
+
+section a {
+  text-decoration: none;
 }
 
 button {
   text-transform: uppercase;
   font-size: 16px;
-  color: #F9F9F9;
+  color: #f9f9f9;
 
-  background-color: #69B99D;
+  background-color: #69b99d;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 32px 15px 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  cursor: pointer; /* efeito mãozinha a passar o cursos em cima do elemento */
+}
+
+button:hover {
+  background-color: #3f9679;
+  opacity: 1;
 }
 
 footer {
   font-size: 14px;
   line-height: 28px;
+
+  text-align: center;
+  margin-top: 80px;
 }
 
 footer a {
@@ -85,4 +127,10 @@ footer a {
   color: #1f1534;
 
   text-decoration: none;
+}
+
+#balls {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
 }
