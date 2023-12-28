@@ -1,0 +1,11 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.page {
+    border: 1px solid red;
+    width: 1000px;
+    margin: 65px auto 0px;
+}
